@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "0a761f9e-ce48-4bdc-8176-bed108f361ee",
+		"name": "Erajaya Product Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11727439"
+	},
+	"item": [
+		{
+			"name": "GET PRODUCT BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/product/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET PRODUCT BY ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/product/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Iphone 14 128 GB\",\n        \"price\": 17000000,\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \",\n        \"quantity\": 190,\n        \"created_at\": \"2023-10-10T23:10:46.860022+07:00\",\n        \"updated_at\": \"2023-10-10T23:10:46.860022+07:00\"\n    },\n    \"code\": 200,\n    \"success\": true,\n    \"error\": null,\n    \"message\": \"Get product success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET PRODUCT LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/product?offset=2&limit=4&sort_by=price&sort_type=asc&search=Iphone",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "2",
+							"description": "Mandatory"
+						},
+						{
+							"key": "limit",
+							"value": "4",
+							"description": "Mandatory"
+						},
+						{
+							"key": "sort_by",
+							"value": "price"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						},
+						{
+							"key": "search",
+							"value": "Iphone"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET PRODUCT LIST",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/product?offset=1&limit=4&sort_by=price&sort_type=asc&search=Iphone",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "1",
+									"description": "Mandatory"
+								},
+								{
+									"key": "limit",
+									"value": "4",
+									"description": "Mandatory"
+								},
+								{
+									"key": "sort_by",
+									"value": "price"
+								},
+								{
+									"key": "sort_type",
+									"value": "asc"
+								},
+								{
+									"key": "search",
+									"value": "Iphone"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"limit\": 4,\n        \"offset\": 2,\n        \"total_pages\": 2,\n        \"products\": [\n            {\n                \"id\": 3,\n                \"name\": \"Iphone 15 128 GB\",\n                \"price\": 1290310,\n                \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \",\n                \"quantity\": 19,\n                \"created_at\": \"2023-10-11T01:04:21.251879+07:00\",\n                \"updated_at\": \"2023-10-11T01:04:21.251879+07:00\"\n            },\n            {\n                \"id\": 1,\n                \"name\": \"Iphone 14 128 GB\",\n                \"price\": 17000000,\n                \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \",\n                \"quantity\": 190,\n                \"created_at\": \"2023-10-10T23:10:46.860022+07:00\",\n                \"updated_at\": \"2023-10-10T23:10:46.860022+07:00\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Iphone 14 128 GB\",\n                \"price\": 17000000,\n                \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \",\n                \"quantity\": 190,\n                \"created_at\": \"2023-10-10T23:56:03.873421+07:00\",\n                \"updated_at\": \"2023-10-10T23:56:03.873421+07:00\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Iphone 16 256 GB\",\n                \"price\": 166312330,\n                \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \",\n                \"quantity\": 100,\n                \"created_at\": \"2023-10-11T01:04:42.232027+07:00\",\n                \"updated_at\": \"2023-10-11T01:04:42.232027+07:00\"\n            }\n        ]\n    },\n    \"code\": 200,\n    \"success\": true,\n    \"error\": null,\n    \"message\": \"Get product list success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Iphone 15 Pro Max 512 GB Black\",\n    \"price\": 69269,\n    \"quantity\": 15888,\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/product",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE PRODUCT",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Iphone 15 Pro Max 512 GB Black\",\n    \"price\": 69269,\n    \"quantity\": 15888,\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod blandit est, scelerisque interdum velit ultrices in. Aenean ante dui, scelerisque vitae tempor ac, viverra eu quam. Aliquam quis auctor nisi. Donec pulvinar arcu at hendrerit tristique. In arcu orci, sollicitudin ut magna lobortis, porta aliquet neque. Mauris orci ipsum, bibendum ac tellus eget, suscipit fringilla nisi. Nullam condimentum orci at lorem tincidunt, in sollicitudin lectus dignissim. In sed dolor id urna interdum pharetra. Mauris rhoncus erat sapien, eu gravida neque elementum sed. Aenean posuere, lectus quis vulputate lacinia, magna sem semper metus, accumsan ullamcorper ante nulla vitae urna. Donec ultrices, enim sed faucibus venenatis, tortor justo accumsan tellus, ac cursus lorem magna a odio. In porttitor tortor ac nibh euismod porttitor. Etiam facilisis velit eget enim laoreet tincidunt. Vestibulum cursus aliquam dui, ut pharetra sem porta a. Proin sapien lacus, feugiat eu ligula et, fringilla scelerisque orci. \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/product",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"code\": 200,\n    \"success\": true,\n    \"error\": null,\n    \"message\": \"Create product success\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8088",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,13 @@
+version: "3"
+services:
+  product_service:
+    restart: always
+    build: .
+    ports:
+      - "8088:8088"
+    env_file:
+      - .env
+    
+    # to sync the development folder with app folder in docker container, will be applied to the container by docker compose up
+    volumes:
+      - ./:/app
