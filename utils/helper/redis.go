@@ -3,7 +3,6 @@ package helper
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"time"
 
 	"github.com/redis/go-redis/v9"
@@ -37,7 +36,6 @@ func DeleteAllRedisDocumentByPath(ctx context.Context, redisClient *redis.Client
 	iter := redisClient.Scan(ctx, 0, redisConfig.RootDocument+path+"*", 0).Iterator()
 	var foundedRecordCount = 0
 	for iter.Next(ctx) {
-		fmt.Println(iter.Val())
 		logger.GetLogger(ctx).Infof("Deleted= %s\n", iter.Val())
 		redisClient.Del(ctx, iter.Val())
 		foundedRecordCount++

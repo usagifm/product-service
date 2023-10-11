@@ -3,7 +3,6 @@ package sqlx
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"math"
 	"strconv"
 	"time"
@@ -77,7 +76,7 @@ func (r ProductRepository) GetProductList(ctx context.Context, searchByName stri
 	case "name":
 		orderByClause = "name " + sortType
 	default:
-		orderByClause = "created_at DESC" // Default sorting by newest
+		orderByClause = "created_at " + sortType // Default sorting by newest
 	}
 
 	totalCount := 0
@@ -88,8 +87,6 @@ func (r ProductRepository) GetProductList(ctx context.Context, searchByName stri
 
 	// Custom query for easy customization
 	query := `SELECT * FROM products WHERE name LIKE $1  ORDER BY ` + orderByClause + ` LIMIT $2 OFFSET $3`
-
-	fmt.Println(query)
 
 	products := []model.Product{}
 	offsetQuery := 0 + (offset-1)*limit
